@@ -10,10 +10,6 @@ function registrar(){
                 "fullname":fullname
             });
 
-
-
-
-
         $.ajax({
             url:'/users',
             type:'POST',
@@ -21,6 +17,8 @@ function registrar(){
             data : usuario,
             dataType:'json',
             success: function(response){
+                alert("usuario registrado");
+                location.href="/static/login.html"
 
 
             },
