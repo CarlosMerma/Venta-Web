@@ -12,26 +12,28 @@ class User(connector.Manager.Base):
     username = Column(String(12))
 
 
-class Message(connector.Manager.Base):
-    __tablename__ = 'messages'
-    id = Column(Integer, Sequence('message_id_seq'), primary_key=True)
-    content = Column(String(500))
-    sent_on = Column(DateTime())
-    user_from_id = Column(Integer, ForeignKey('users.id'))
-    user_to_id = Column(Integer, ForeignKey('users.id'))
-    user_from = relationship(User, foreign_keys=[user_from_id])
-    user_to = relationship(User, foreign_keys=[user_to_id])
+class Producto(connector.Manager.Base):
+    __tablename__ = 'producto'
+    id = Column(Integer, Sequence('producto_id_seq'), primary_key=True)
+    codigo = Column(Integer)
+    nombre = Column(String(50))
+    marca = Column(String(50))
+    cantidad  =  Column(Integer)
+    precio = Column(Integer)
 
-class Perfile(connector.Manager.Base):
-    __tablename__ = 'perfiles'
-    id = Column(Integer, Sequence('perfile_id_seq'), primary_key=True)
-    perfil_name = Column(String(20))
-    perfil_email = Column(String(20))
-    perfil_number = Column(String(20))
-    perfil_description = Column(String(500))
 
-class Group(connector.Manager.Base):
-    __tablename__ = "groups"
-    id = Column(Integer, Sequence('groups_id_seq'), primary_key=True)
-    name = Column(String(500))
-
+class Compras(connector.Manager.Base):
+    __tablename__ = 'compras'
+    id = Column(Integer, Sequence('compras_id_seq'), primary_key=True)
+    usercomprador_id = Column(Integer, ForeignKey('users.id'))
+    producto_id = Column(Integer, ForeignKey('producto.id'))
+    usercomprador = relationship(User, foreign_keys=[usercomprador_id])
+    producto = relationship(Producto, foreign_keys=[producto_id])
+    satisfaccion = Column(Integer)
+class Mensaje(connector.Manager.Base):
+    __tablename__ = 'mensaje'
+    id = Column(Integer, Sequence('mensaje_id_seq'), primary_key=True)
+    nombre = Column(String(50))
+    email = Column(String(50))
+    phone = Column(Integer)
+    message = Column(String(200))

@@ -9,7 +9,7 @@ class Manager:
     session = None
 
     def createEngine(self):
-        engine = create_engine('sqlite:///message.db?check_same_thread=False', echo=False)
+        engine = create_engine('sqlite:///datatienda.db?check_same_thread=False', echo=False)
         self.Base.metadata.create_all(engine)
         return engine
 
@@ -20,6 +20,7 @@ class Manager:
 
         return session
 
+
 class AlchemyEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj.__class__, DeclarativeMeta):
@@ -27,10 +28,15 @@ class AlchemyEncoder(json.JSONEncoder):
             for field in [x for x in dir(obj) if not x.startswith('_') and x != 'metadata']:
                 data = obj.__getattribute__(field)
                 try:
-                    json.dumps(data)
-                    fields[field] = data
+                    if isinstance(data.__class__, DeclarativeMeta):
+                        _obj = AlchemyEncoder.default(self, data)
+                        json.dumps(_obj)
+                        fields[field] = _obj
+                    else:
+                        json.dumps(data)
+                        fields[field] = data
                 except TypeError:
-                    fields[field] = None
+                    fields[field] = str(data)
 
             return fields
 
