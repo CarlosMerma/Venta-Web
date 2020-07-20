@@ -2,6 +2,8 @@ var currentUserId = 0;
 
 var currentClickedId = 0;
 
+
+
 function usuario(){
         $.ajax({
             url:'/current',
