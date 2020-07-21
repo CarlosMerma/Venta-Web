@@ -14,10 +14,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/Proyecto1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datatienda.db" beforeDir="false" afterPath="$PROJECT_DIR$/datatienda.db" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/model/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catalogo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalogo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catalogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalogo.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat-web-CarlosMerma" />
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -92,9 +100,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559078700570</updated>
+<<<<<<< HEAD
       <workItem from="1595265010851" duration="7175000" />
       <workItem from="1595289439776" duration="3617000" />
       <workItem from="1595294405791" duration="1690000" />
+=======
+      <workItem from="1595265010851" duration="7386000" />
+      <workItem from="1595288487658" duration="3255000" />
+      <workItem from="1595302529967" duration="264000" />
+      <workItem from="1595304134962" duration="298000" />
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
     </task>
     <servers />
   </component>
@@ -126,25 +141,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595267377053">
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595289394192">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595267377053" />
-    <state width="1323" height="270" key="GridCell.Tab.0.bottom" timestamp="1595272347955">
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595289394192" />
+    <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1595292073349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="270" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595272347955" />
-    <state width="1323" height="270" key="GridCell.Tab.0.center" timestamp="1595272347955">
+    <state width="1323" height="89" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
+    <state width="1323" height="89" key="GridCell.Tab.0.center" timestamp="1595292073349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="270" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595272347955" />
-    <state width="1323" height="270" key="GridCell.Tab.0.left" timestamp="1595272347955">
+    <state width="1323" height="89" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
+    <state width="1323" height="89" key="GridCell.Tab.0.left" timestamp="1595292073348">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="270" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595272347955" />
-    <state width="1323" height="270" key="GridCell.Tab.0.right" timestamp="1595272347955">
+    <state width="1323" height="89" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595292073348" />
+    <state width="1323" height="89" key="GridCell.Tab.0.right" timestamp="1595292073349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+<<<<<<< HEAD
     <state width="1323" height="270" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595272347955" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1595294455543">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -155,8 +171,15 @@
     </state>
     <state x="298" y="131" width="432" height="637" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/298.0.1366.768/0.768.1920.1080@298.0.1366.768" timestamp="1595293685116" />
     <state x="72" y="206" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1595295048985" />
+=======
+    <state width="1323" height="89" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
+    <state x="186" y="10" key="SettingsEditor" timestamp="1595288889826">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595288889826" />
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Venta_Web$run.coverage" NAME="run Coverage Results" MODIFIED="1595272347942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Venta_Web$run.coverage" NAME="run Coverage Results" MODIFIED="1595304156772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

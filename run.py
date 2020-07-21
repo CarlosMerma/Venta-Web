@@ -236,11 +236,14 @@ def delete_producto():
     session.commit()
     return "Deleted Compras"
 
-@app.route("/authenticate", methods=['POST'])
-def authenticate():
-    message=json.loads(request.data)
-
+@app.route('/authenticate', methods = ["POST"])
+def authenticateMobile():
+    message = json.loads(request.data)
+    username = message['username']
+    password = message['password']
+    #2. look in database
     db_session = db.getSession(engine)
+<<<<<<< HEAD
     user = db_session.query(entities.User).filter(entities.User.username == message['username']).filter(entities.User.password == message['password'])
     user_l = user[:]
     db_session.close()
@@ -252,6 +255,21 @@ def authenticate():
         loge ={"respuesta" :" Sorry " + message['username'] + " you are not a valid user"}
         return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=202,mimetype="application/json")
 
+=======
+    try:
+        user = db_session.query(entities.User
+            ).filter(entities.User.username == username
+            ).filter(entities.User.password == password
+            ).one()
+        session['logged_user'] = user.id
+        message = {'message': 'Authorized', 'user_id': user.id, 'username': user.name}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+        return Response(message, status=200, mimetype='application/json')
+    except Exception:
+        message = {'message': 'Unauthorized'}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+        return Response(message, status=401, mimetype='application/json')
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
 
 @app.route('/current', methods = ["GET"])
 def current_user():
