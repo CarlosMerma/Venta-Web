@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="470cbfea-5315-417f-843c-1405bef27e34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatienda.db" beforeDir="false" afterPath="$PROJECT_DIR$/datatienda.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1595265010851" duration="7386000" />
       <workItem from="1595288487658" duration="3255000" />
       <workItem from="1595302529967" duration="264000" />
-      <workItem from="1595304134962" duration="298000" />
+      <workItem from="1595304134962" duration="879000" />
     </task>
     <servers />
   </component>
@@ -121,32 +121,36 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595289394192">
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595304406183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595289394192" />
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1595292073349">
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595304406183" />
+    <state width="1323" height="250" key="GridCell.Tab.0.bottom" timestamp="1595304779252">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
-    <state width="1323" height="89" key="GridCell.Tab.0.center" timestamp="1595292073349">
+    <state width="1323" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595304779252" />
+    <state width="1323" height="250" key="GridCell.Tab.0.center" timestamp="1595304779252">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
-    <state width="1323" height="89" key="GridCell.Tab.0.left" timestamp="1595292073348">
+    <state width="1323" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595304779252" />
+    <state width="1323" height="250" key="GridCell.Tab.0.left" timestamp="1595304779251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595292073348" />
-    <state width="1323" height="89" key="GridCell.Tab.0.right" timestamp="1595292073349">
+    <state width="1323" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595304779251" />
+    <state width="1323" height="250" key="GridCell.Tab.0.right" timestamp="1595304779252">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595292073349" />
+    <state width="1323" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595304779252" />
     <state x="186" y="10" key="SettingsEditor" timestamp="1595288889826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595288889826" />
+    <state x="0" y="0" width="581" height="728" key="find.popup" timestamp="1595305010511">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="581" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595305010511" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Venta_Web$run.coverage" NAME="run Coverage Results" MODIFIED="1595304156772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Venta_Web$run.coverage" NAME="run Coverage Results" MODIFIED="1595304779227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
