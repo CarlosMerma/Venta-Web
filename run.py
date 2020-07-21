@@ -172,8 +172,6 @@ def comprar():
     usercomprador_id = usercomprador_id,
     producto_id = producto_id,
     satisfaccion = satisfaccion)
-
-    #2. Save in database
     db_session = db.getSession(engine)
     db_session.add(newcompra)
     db_session.commit()
@@ -206,8 +204,8 @@ def create_productos():
         codigo=c['codigo'],
         nombre=c['nombre'],
         marca=c['marca'],
-        cantidad=c['cantidad'],
         precio=c['precio'],
+        holder_id=c['holder_id']
 
     )
     session = db.getSession(engine)
@@ -226,7 +224,7 @@ def update_producto():
         setattr(producto, key, c[key])
     session.add(producto)
     session.commit()
-    return 'Updated User'
+    return 'Updated product'
 
 
 @app.route('/productos', methods = ['DELETE'])
@@ -243,11 +241,7 @@ def authenticate():
     message=json.loads(request.data)
 
     db_session = db.getSession(engine)
-    user = db_session.query(entities.User).filter(
-        entities.User.username == message['username']
-    ).filter(
-        entities.User.password == message['password']
-    )
+    user = db_session.query(entities.User).filter(entities.User.username == message['username']).filter(entities.User.password == message['password'])
     user_l = user[:]
     db_session.close()
     if user_l != None:

@@ -1,41 +1,37 @@
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<html lang="en">
 <head>
-    <title>Crud_compra</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="catalogo.js"></script>
+    <meta charset="utf-8"/>
+    <script src="/static/js/libs/jquery-3.3.1.js"></script>
+    <link rel="stylesheer" href="/static/css/bootstrap.css">
+    <script src="/templates/catalogo.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="http://127.0.0.1:8080/static/js/libs/bootstrap.min.js"></script>
+    <title>
+        Catalogo
+    </title>
 </head>
-
- <body onload="allproductos()" >
-<table width="100%" border="1px solid">
-    <tr>
-        <td width="25%">
-            <div  class="alert alert-primary" role="alert">
-                <label id="cu_username"></label>
-            </div>
-            <div id="allcompras">
-                <span>Productos seleccionados</span>
-            </div>
-            <input type="button" class="btn btn-primary" value="Comprar" onclick="pagar()">
-
-        </td>
-        <td width="75%">
-            <div id="">
-            </div>
-            <br/>
-            <div id="allproductos">
-                <span>Productos disponibles</span>
-                <br>
-                <span>Haga clic sobre el producto que desee comprar</span>
-            </div>
-        </td>
-    </tr>
-</table>
-
+<body>
+    <div class="container mt-2">
+        <div class="row">
+                <div id="Buttons">
+                    <div class="row">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div id= "cars" class="container">
+                        <div class="row">
+                            <div id="sellers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 </body>
-
+</html>

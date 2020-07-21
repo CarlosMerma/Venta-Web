@@ -27,75 +27,32 @@ function usuario(){
 
     }
 
-     function allcompras(){
-        $.ajax({
-            url:'/compras',
-            type:'GET',
-            contentType: 'application/json',
-            dataType:'json',
-            success: function(response){
-                //alert(JSON.stringify(response));
-                var i = 0;
-                $.each(response, function(){
-                    if( (response[i]['usercomprador_id']) == currentUserId){
-                    f = '<div class="alert alert-secondary" role="alert"  >';
-                    f = f + response[i]['producto']['nombre'];
-                    f = f + '</div>';
-                    i = i+1;
-                    $('#allcompras').append(f);}
-                    else {
-                        i=i+1;
-                    }
-                });
-            },
-            error: function(response){
-                alert(JSON.stringify(response));
-            }
-        });
-    }
-        function allproductos(){
-        $.ajax({
-            url:'/productos',
-            type:'GET',
-            contentType: 'application/json',
-            dataType:'json',
-            success: function(response){
-                //alert(JSON.stringify(response));
-                var i = 0;
-                $.each(response, function(){
-                    if( (response[i]['cantidad']) != 0){
-                    f = '<div class="alert alert-secondary" role="alert"  onclick=comprar('+currentUserId+','+response[i].id+') >';
-                    f = f + response[i]['nombre'];
-                    f = f + '<br/>'
-                    f = f + 'Precio: '
-                    f = f + response[i]['precio'];
-                    f = f + '<br/>'
-                    f = f + 'Cantidad: '
-                    f = f + response[i]['cantidad'];
-                    f = f + '</div>';
-                    i = i+1;
-                    $('#allproductos').append(f);
-                    }
-                    else {
-                    i = i+1;
-                    }
-                });
-            },
-            error: function(response){
-                alert(JSON.stringify(response));
-            }
-        });
-    }
+
+function allproductos(){
+    $.ajax({
+        url:'/productos',
+        type:'GET',
+        contentType: 'application/json',
+        dataType:'json',
+        success: function(response){
+            //alert(JSON.stringify(response));
+            var i = 0;
+            $.each(response, function(){
+                let card = '<div class="card col-12" "><div class="card-body"><h5 class="card-title">carname</h5><p class="card-text">precio , persona</p><button onclick()="comprar()">comprar</button></div></div>';
+                card = card.replace(carname, response[i]['marca']);
+                card = card.replace(precio, response[i]['precio']);
+                card = card.replace(persona, response[i]['nombre']);
+                i++;
+                $('#sellers').append(card);
+            });
+        },
+        error: function(response){
+            alert(JSON.stringify(response));
+        }
+    });
+}
 
 function comprar(current, producto_id){
-        //alert(user_from_id);
-        //alert(user_to_id);
-        currentClickedId = producto_id;
-        var data = JSON.stringify({
-                "usercomprador_id": currentUserId,
-                "producto_id": currentClickedId,
-                "satisfaccion": 8
-            });
         $.ajax({
             url:'/compra',
             type:'POST',
