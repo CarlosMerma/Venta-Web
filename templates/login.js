@@ -14,7 +14,7 @@ function login() {
             if (data['respuesta']== "Logueado"){
                 console.log("Authenticated!");
                 alert("Authenticated!!!");
-                window.location.href='/static/catalogo.html';
+                location.href='/static/catalogo.html';
             }
         },
         data:JSON.stringify(credentials)
