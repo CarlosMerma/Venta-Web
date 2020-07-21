@@ -15,10 +15,10 @@ class User(connector.Manager.Base):
 class Producto(connector.Manager.Base):
     __tablename__ = 'producto'
     id = Column(Integer, Sequence('producto_id_seq'), primary_key=True)
-    codigo = Column(Integer)
-    nombre = Column(String(50))
+    holder_id = Column(Integer, ForeignKey('users.id'))
+    holder = relationship(User, foreign_keys=[holder_id])
     marca = Column(String(50))
-    cantidad  =  Column(Integer)
+    nombre = Column(String(50))
     precio = Column(Integer)
 
 

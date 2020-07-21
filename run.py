@@ -172,8 +172,6 @@ def comprar():
     usercomprador_id = usercomprador_id,
     producto_id = producto_id,
     satisfaccion = satisfaccion)
-
-    #2. Save in database
     db_session = db.getSession(engine)
     db_session.add(newcompra)
     db_session.commit()
@@ -206,8 +204,8 @@ def create_productos():
         codigo=c['codigo'],
         nombre=c['nombre'],
         marca=c['marca'],
-        cantidad=c['cantidad'],
         precio=c['precio'],
+        holder_id=c['holder_id']
 
     )
     session = db.getSession(engine)
@@ -226,7 +224,7 @@ def update_producto():
         setattr(producto, key, c[key])
     session.add(producto)
     session.commit()
-    return 'Updated User'
+    return 'Updated product'
 
 
 @app.route('/productos', methods = ['DELETE'])
@@ -245,6 +243,19 @@ def authenticateMobile():
     password = message['password']
     #2. look in database
     db_session = db.getSession(engine)
+<<<<<<< HEAD
+    user = db_session.query(entities.User).filter(entities.User.username == message['username']).filter(entities.User.password == message['password'])
+    user_l = user[:]
+    db_session.close()
+    if user_l != None:
+        session["user"]=json.dumps(user_l,cls=connector.AlchemyEncoder)
+        loge={"respuesta":"Logueado","id":user_l[0].id,"username":user_l[0].username}
+        return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=200,mimetype="application/json")
+    else:
+        loge ={"respuesta" :" Sorry " + message['username'] + " you are not a valid user"}
+        return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=202,mimetype="application/json")
+
+=======
     try:
         user = db_session.query(entities.User
             ).filter(entities.User.username == username
@@ -258,6 +269,7 @@ def authenticateMobile():
         message = {'message': 'Unauthorized'}
         message = json.dumps(message, cls=connector.AlchemyEncoder)
         return Response(message, status=401, mimetype='application/json')
+>>>>>>> fed410385e098601b203648c389a47e2414e4e27
 
 @app.route('/current', methods = ["GET"])
 def current_user():
