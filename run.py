@@ -238,36 +238,22 @@ def delete_producto():
 @app.route('/authenticate', methods = ["POST"])
 def authenticateMobile():
     message = json.loads(request.data)
-    username = message['username']
-    password = message['password']
-    #2. look in database
-    db_session = db.getSession(engine)
 
-    user = db_session.query(entities.User).filter(entities.User.username == message['username']).filter(entities.User.password == message['password'])
+    db_session = db.getSession(engine)
+    user = db_session.query(entities.User).filter(
+        entities.User.username == message['username']
+    ).filter(
+        entities.User.password == message['password']
+    )
     user_l = user[:]
     db_session.close()
     if user_l != None:
-        session["user"]=json.dumps(user_l,cls=connector.AlchemyEncoder)
-        loge={"respuesta":"Logueado","id":user_l[0].id,"username":user_l[0].username}
-        return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=200,mimetype="application/json")
+        session["user"] = json.dumps(user_l, cls=connector.AlchemyEncoder)
+        loge = {"respuesta": "Logueado", "id": user_l[0].id, "username": user_l[0].username}
+        return Response(json.dumps(loge, cls=connector.AlchemyEncoder), status=200, mimetype="application/json")
     else:
-        loge ={"respuesta" :" Sorry " + message['username'] + " you are not a valid user"}
-        return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=202,mimetype="application/json")
-
-
-    try:
-        user = db_session.query(entities.User
-            ).filter(entities.User.username == username
-            ).filter(entities.User.password == password
-            ).one()
-        session['logged_user'] = user.id
-        message = {'message': 'Authorized', 'user_id': user.id, 'username': user.name}
-        message = json.dumps(message, cls=connector.AlchemyEncoder)
-        return Response(message, status=200, mimetype='application/json')
-    except Exception:
-        message = {'message': 'Unauthorized'}
-        message = json.dumps(message, cls=connector.AlchemyEncoder)
-        return Response(message, status=401, mimetype='application/json')
+        loge = {"respuesta": " Sorry " + message['username'] + " you are not a valid user"}
+        return Response(json.dumps(loge, cls=connector.AlchemyEncoder), status=202, mimetype="application/json")
 
 
 @app.route('/current', methods = ["GET"])
