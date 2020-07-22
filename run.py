@@ -243,7 +243,7 @@ def authenticateMobile():
     password = message['password']
     #2. look in database
     db_session = db.getSession(engine)
-<<<<<<< HEAD
+
     user = db_session.query(entities.User).filter(entities.User.username == message['username']).filter(entities.User.password == message['password'])
     user_l = user[:]
     db_session.close()
@@ -255,7 +255,7 @@ def authenticateMobile():
         loge ={"respuesta" :" Sorry " + message['username'] + " you are not a valid user"}
         return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=202,mimetype="application/json")
 
-=======
+
     try:
         user = db_session.query(entities.User
             ).filter(entities.User.username == username
@@ -269,7 +269,7 @@ def authenticateMobile():
         message = {'message': 'Unauthorized'}
         message = json.dumps(message, cls=connector.AlchemyEncoder)
         return Response(message, status=401, mimetype='application/json')
->>>>>>> fed410385e098601b203648c389a47e2414e4e27
+
 
 @app.route('/current', methods = ["GET"])
 def current_user():
