@@ -17,6 +17,7 @@ class Producto(connector.Manager.Base):
     id = Column(Integer, Sequence('producto_id_seq'), primary_key=True)
     holder_id = Column(Integer, ForeignKey('users.id'))
     holder = relationship(User, foreign_keys=[holder_id])
+    codigo= Column(String(50))
     marca = Column(String(50))
     nombre = Column(String(50))
     precio = Column(Integer)

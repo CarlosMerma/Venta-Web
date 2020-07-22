@@ -34,7 +34,7 @@ def contactanos():
 
 @app.route('/catalogo')
 def catalogo():
-    return render_template('cata    logo.html')
+    return render_template('catalogo.html')
 
 @app.route('/users', methods = ['GET'])
 def get_users():
@@ -206,7 +206,6 @@ def create_productos():
         marca=c['marca'],
         precio=c['precio'],
         holder_id=c['holder_id']
-
     )
     session = db.getSession(engine)
     session.add(producto)
