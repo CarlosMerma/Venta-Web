@@ -18,7 +18,7 @@ function getData(){
             }
         },
         error: function(data){
-            if(data['respuesta']=="Sorry"){
+            if(data['respuesta']==="Sorry"){
                 console.log("No se puedo loguear")
                 alert("No se pudo loguear!")
             }
