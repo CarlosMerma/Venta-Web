@@ -1,21 +1,16 @@
-<!DOCTYPE html>
+{% extends "default.html" %}
 
-<html lang="en">
+{% block content %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 <head>
-    <meta charset="utf-8"/>
-    <script src="/static/js/libs/jquery-3.3.1.js"></script>
-    <link rel="stylesheer" href="/static/css/bootstrap.css">
-    <script src="/templates/catalogo.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="http://127.0.0.1:5000/static/js/libs/bootstrap.min.js"></script>
-    <title>
-        Catalogo
-    </title>
-</head>
+    <title>Crud_compra</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="catalogo.js"></script>
 </head>
 <body onload="usuario()">
 
@@ -28,7 +23,7 @@
             <div id="allcompras">
                 <span>Productos seleccionados</span>
             </div>
-            <input type="button" class="btn btn-primary" value="Comprar" onclick="pagar() & comprar()" >
+            <input type="button" class="btn btn-primary" value="Comprar" onclick="pagar()">
 
         </td>
         <td width="75%">
@@ -45,3 +40,4 @@
 </table>
 
 </body>
+{% endblock content %}
