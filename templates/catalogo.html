@@ -1,4 +1,6 @@
+{% extends "default.html" %}
 
+{% block content %}
 <html xmlns="http://www.w3.org/1999/xhtml">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -10,8 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="catalogo.js"></script>
 </head>
+<body onload="usuario()">
 
- <body onload="allproductos()" >
 <table width="100%" border="1px solid">
     <tr>
         <td width="25%">
@@ -38,4 +40,4 @@
 </table>
 
 </body>
-
+{% endblock content %}

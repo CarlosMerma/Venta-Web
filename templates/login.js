@@ -1,25 +1,32 @@
-function login() {
-    console.log("LOGIN USER");
-    var username = $('#username').val();//getting username by id
-    var password = $('#password').val();
-    console.log ("DATA>",username,password)
-    var credentials = {'username':username, 'password':password}
-    $.ajax({
-        url: '/authenticate',
-        type : 'post',
-        dataType:'json',
-        contentType:'application/json',
-        async:false,
-        success: function (data) {
-            if (data['respuesta']== "Logueado"){
-                console.log("Authenticated!");
-                alert("Authenticated!!!");
-                window.location.href='/static/index.html';
+function getData(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var message = JSON.stringify({
+                "username": username,
+                "password": password
+            });
+
+        $.ajax({
+            url:'/authenticate',
+            type:'POST',
+            contentType: 'application/json',
+            data : message,
+            dataType:'json',
+            success: function(response){
+                $('#action').html(response['statusText']);
+                alert("Usuario logueado")
+            },
+            error: function(response){
+                if(response['status']==401){
+                    alert("Usuario no registrado");
+                     document.getElementById("username").value="";
+                     document.getElementById("password").value="";
+                }else{
+                    location.href= "/static/index.html";
+                }
             }
-        },
-        data:JSON.stringify(credentials)
-    });
-}
+        });
+    }
 
     function redirigir(){
            location.href= "/static/register.html";
