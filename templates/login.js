@@ -11,7 +11,7 @@ function login() {
         contentType:'application/json',
         async:false,
         success: function (data) {
-            if (data['respuesta']== "Logueado"){
+            if (data['respuesta']=== "Logueado"){
                 console.log("Authenticated!");
                 alert("Authenticated!!!");
                 window.location.href='/static/index.html';

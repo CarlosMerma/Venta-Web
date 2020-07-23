@@ -24,9 +24,7 @@ def index():
 def login():
     return render_template('login.html')
 
-@app.route('/ubicanos')
-def ubicanos():
-    return render_template('ubicanos.html')
+
 
 @app.route('/contactanos')
 def contactanos():
@@ -134,6 +132,15 @@ def create_compra():
     session.add(compra)
     session.commit()
     return 'Created Compra'
+
+@app.route('/compras', methods = ['DELETE'])
+def delete_compra():
+    id = request.form['key']
+    session = db.getSession(engine)
+    compras = session.query(entities.User).filter(entities.compra.id == id).one()
+    session.delete(compra)
+    session.commit()
+    return "Deleted Compra"
 
 
 @app.route('/compras', methods = ['PUT'])
@@ -262,11 +269,15 @@ def authenticate():
 @app.route('/current', methods = ["GET"])
 def current_user():
     db_session = db.getSession(engine)
+
     user = db_session.query(entities.User).filter(
-        entities.User.id == session['logged_user']
+        entities.User.id == session['logueado']
         ).first()
+    user_l = user[:]
+    user2=user_l[0]["id"]
+
     return Response(json.dumps(
-            user,
+            user2,
             cls=connector.AlchemyEncoder),
             mimetype='application/json'
         )

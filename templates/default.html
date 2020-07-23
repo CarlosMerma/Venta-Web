@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>Autos</title>
+    <title>Computer Store</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -29,15 +29,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/static/contactanos.html" >Contactanos</a>
                 </li>
-                <li class="nav-item">
-                   <a class="nav-link" href="/static/ubicanos.html" >Ubicanos</a>
-                </li>
-
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <div><a href="{{url_for('logout')}}">Logout</a></div>
                   <div>||</div>
-                 <div><a id="referencia" href="/static/login.html">Login</a></div>
+                 <div><a id="referencia" href="/static/login.html">Loginprrra</a></div>
               </form>
             </div>
           </nav>
@@ -46,38 +42,5 @@
 
 {% endblock content %}
 
-</body>
-<footer>
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-6 text-left">
-            <h6 class="text-muted lead">CONTACTO:</h6>
-            <h6 class="text-muted">
-            Jr. Medrano Silva No. 186 Piso 2<br>
-            Barranco-Lima-Peru.<br>
-            Teléfonos: 01 666 5555 – 01 666 4444<br>
-            </h6>
-        </div>
 
-        <div class="col-xs-12 col-md-6 text-right">
-            <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
-            <div class="redes-footer">
-                <a href="https://www.facebook.com/"><img src="{{url_for('static',filename='img/icon/facebook.png')}}" width="30" height="30"></a>
-                <a href="https://twitter.com/"><img src="{{url_for('static',filename='img/icon/twitter.png')}}" width="30" height="30"></a>
-                <a href="https://www.youtube.com/"><img src="{{url_for('static',filename='img/icon/youtube.png')}}" width="30" height="30"></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
 
-        <div class="col-md-12 text-right">
-            <p class="text-muted small">Computer Store @2019.<br> Todos los derechos reservados.</p>
-        </div>
-
-    </div>
-
-    </div>
-  </div>
-</div>
-</footer>
-</html>
