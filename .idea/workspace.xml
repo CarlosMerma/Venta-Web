@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="470cbfea-5315-417f-843c-1405bef27e34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/datatienda.db" beforeDir="false" afterPath="$PROJECT_DIR$/datatienda.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="470cbfea-5315-417f-843c-1405bef27e34" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +86,7 @@
       <updated>1559078700570</updated>
       <workItem from="1595265010851" duration="4203000" />
       <workItem from="1595475438468" duration="2000" />
+      <workItem from="1595479754495" duration="23000" />
     </task>
     <servers />
   </component>
@@ -117,6 +115,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595267377053">
