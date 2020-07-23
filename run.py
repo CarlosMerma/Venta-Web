@@ -1,7 +1,9 @@
-from flask import Flask,render_template, request, session, Response, redirect
+from flask import Flask,render_template, request, Response, redirect
 from database import connector
 from model import entities
 import json
+#from flask import session as gsession
+gsession = {}
 from datetime import datetime
 
 db = connector.Manager()
@@ -258,7 +260,10 @@ def authenticate():
     user_l = user[:]
     db_session.close()
     if user_l != None:
-        session["user"]=json.dumps(user_l,cls=connector.AlchemyEncoder)
+        print('entro al if')
+        gsession["user"]=json.dumps(user_l,cls=connector.AlchemyEncoder)
+        print(gsession)
+        print(gsession["user"])
         loge={"respuesta":"Logueado","id":user_l[0].id,"username":user_l[0].username}
         return Response (json.dumps(loge,cls=connector.AlchemyEncoder ),status=200,mimetype="application/json")
     else:
@@ -268,16 +273,19 @@ def authenticate():
 
 @app.route('/current', methods = ["GET"])
 def current_user():
+    gsession['asd'] = 'gaaaaaaaa'
+    print(gsession)
+    print(gsession)
+    print(gsession)
     db_session = db.getSession(engine)
-
+    x = json.loads(gsession["user"])
+    print(x)
     user = db_session.query(entities.User).filter(
-        entities.User.id == session['logueado']
+        entities.User.id == x[0]["id"]
         ).first()
-    user_l = user[:]
-    user2=user_l[0]["id"]
 
     return Response(json.dumps(
-            user2,
+            user,
             cls=connector.AlchemyEncoder),
             mimetype='application/json'
         )
