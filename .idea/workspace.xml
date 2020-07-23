@@ -10,15 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="470cbfea-5315-417f-843c-1405bef27e34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatienda.db" beforeDir="false" afterPath="$PROJECT_DIR$/datatienda.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contactanos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contactanos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.js" afterDir="false" />
-    </list>
+    <list default="true" id="470cbfea-5315-417f-843c-1405bef27e34" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat-web-CarlosMerma" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -134,10 +126,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595437943532">
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1595478971587">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595437943532" />
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595478971587" />
     <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1595448337402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
