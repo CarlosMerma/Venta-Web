@@ -139,10 +139,10 @@ def create_compra():
 def delete_compra():
     id = request.form['key']
     session = db.getSession(engine)
-    compras = session.query(entities.User).filter(entities.compra.id == id).one()
-    session.delete(compra)
+    compras = session.query(entities.Compras).filter(entities.Compras.id == id).one()
+    session.delete(compras)
     session.commit()
-    return "Deleted Compra"
+    return "Deleted Compras2"
 
 
 @app.route('/compras', methods = ['PUT'])
