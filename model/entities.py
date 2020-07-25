@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, Sequence, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from database import connector
 
-
 class User(connector.Manager.Base):
     __tablename__ = 'users'
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
@@ -10,7 +9,6 @@ class User(connector.Manager.Base):
     fullname = Column(String(50))
     password = Column(String(12))
     username = Column(String(12))
-
 
 class Producto(connector.Manager.Base):
     __tablename__ = 'producto'
@@ -21,7 +19,6 @@ class Producto(connector.Manager.Base):
     cantidad  =  Column(Integer)
     precio = Column(Integer)
 
-
 class Compras(connector.Manager.Base):
     __tablename__ = 'compras'
     id = Column(Integer, Sequence('compras_id_seq'), primary_key=True)
@@ -30,6 +27,7 @@ class Compras(connector.Manager.Base):
     usercomprador = relationship(User, foreign_keys=[usercomprador_id])
     producto = relationship(Producto, foreign_keys=[producto_id])
     satisfaccion = Column(Integer)
+
 class Mensaje(connector.Manager.Base):
     __tablename__ = 'mensaje'
     id = Column(Integer, Sequence('mensaje_id_seq'), primary_key=True)

@@ -1,5 +1,5 @@
 $(function(){
-    var url = "http://127.0.0.1:5000/users";
+    var url = "https://autocs.herokuapp.com/users";
 
 
     $("#grid").dxDataGrid({
