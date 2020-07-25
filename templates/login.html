@@ -1,4 +1,6 @@
-<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+{% extends "default.html" %}
+{% block content %}
+ <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 <link href='../static/css/login.css' rel='stylesheet' type='text/css'>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -17,9 +19,12 @@
     <h3>Password:</h3>
     <input type="password" name="password" id="password" placeholder="Password"/>
     <br>
-    <input type="button" value="Login"  class="login-button" onclick="getData()"/>
+    <input type="button" value="Login"  class="login-button" onclick="login()"/>
     <br>
     <button type="button" value="Login" class="register-button" onclick="redirigir()">Registrarse</button>
     <br>
   </div>
 </div>
+
+
+{% endblock content %}

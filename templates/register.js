@@ -24,7 +24,6 @@ function registrar(){
             },
             error: function(response){
                 //alert(JSON.stringify(response));
-                alert("usuario no puede ser registrado")
             }
         });
 
